@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">On Device ML Application</string>
+
+    <string name="tv_take_photo">Take photo</string>
+    <string name="tv_description">Select a preset image or take a new photo</string>
+    <string name="tv_placeholder">Object detection demo</string>
+</resources>
