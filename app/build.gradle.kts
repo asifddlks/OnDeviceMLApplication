@@ -49,11 +49,15 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
-    implementation("androidx.exifinterface:exifinterface:1.0.0")
+    implementation("androidx.exifinterface:exifinterface:1.3.7")
 
     // MLKit
-    implementation("com.google.mlkit:object-detection:16.2.3")
+    implementation("com.google.mlkit:object-detection:17.0.0")
 
     //tensorflow-lite
     implementation("org.tensorflow:tensorflow-lite-task-vision:0.3.1")
+
+    // Face features
+    implementation("com.google.mlkit:face-detection:16.1.5")
+
 }

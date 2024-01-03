@@ -29,6 +29,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
 import androidx.exifinterface.media.ExifInterface
@@ -165,6 +166,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     Log.d("isContainsHuman", "isContainsHuman: $isContainsHuman")
                     displayResultsWithCustomModel(results, bitmap)
                 }
+
+            FaceDetectionHelper(context = this@MainActivity).runFaceContourDetection(
+                bitmap,
+                callback = { hasFace ->
+                    if (hasFace) {
+                        Toast.makeText(this@MainActivity, "Face found", Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(this@MainActivity, "No face found", Toast.LENGTH_SHORT)
+                            .show()
+                    }
+                })
         }
     }
 
