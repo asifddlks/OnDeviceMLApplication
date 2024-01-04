@@ -22,10 +22,7 @@ class ObjectDetectionHelper(val context: Context) {
             "Check Execution Time",
             "ObjectDetectionHelper Start Time: ${System.currentTimeMillis()}"
         )
-        Log.d(
-            "Check Execution Time",
-            "ObjectDetectionHelper End Time: ${System.currentTimeMillis()}"
-        )
+
         // Step 1: create TFLite's TensorImage object
         val image = TensorImage.fromBitmap(bitmap)
 
@@ -47,6 +44,11 @@ class ObjectDetectionHelper(val context: Context) {
         //debugPrintWithCustomModel(results)
 
         //displayResultsWithCustomModel(results, bitmap)
+
+        Log.d(
+            "Check Execution Time",
+            "ObjectDetectionHelper End Time: ${System.currentTimeMillis()}"
+        )
 
         return results
     }
